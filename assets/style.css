@@ -228,4 +228,4 @@ table.wrap-first td:first-child{white-space:normal}
 table.keep-2 th,table.keep-2 td:nth-child(2){white-space:nowrap}
 td .sub{display:block;font-weight:400;font-size:13px;color:var(--ink-soft);margin-top:2px}
 
-.top-note{font-size:13px;color:var(--ink-soft);margin:0 0 18px}
+.top-note{display:inline-block;font-size:15px;font-weight:700;color:#fff;background:var(--warn);border-radius:6px;padding:8px 14px;margin:0 0 22px;line-height:1.5}
