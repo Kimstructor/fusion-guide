@@ -1,0 +1,229 @@
+:root{
+  --ink:#16201c;
+  --ink-soft:#4a5a53;
+  --paper:#f7f6f2;
+  --panel:#ffffff;
+  --rule:#d6d9d2;
+  --solder:#1f6b4d;
+  --pad:#b8892b;
+  --warn:#a8392c;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:Pretendard,-apple-system,BlinkMacSystemFont,system-ui,sans-serif;
+  font-size:17px;
+  line-height:1.75;
+  -webkit-text-size-adjust:100%;
+}
+.wrap{max-width:760px;margin:0 auto;padding:0 24px 96px}
+
+header{padding:72px 0 40px;border-bottom:2px solid var(--ink)}
+.kicker{font-size:14px;letter-spacing:.02em;color:var(--solder);margin:0 0 14px}
+h1{font-size:38px;line-height:1.25;font-weight:700;margin:0 0 16px;letter-spacing:-.02em}
+.lede{font-size:19px;color:var(--ink-soft);margin:0;max-width:34em}
+
+h2{font-size:23px;font-weight:700;margin:56px 0 18px;letter-spacing:-.01em}
+h2::before{content:"";display:block;width:34px;height:3px;background:var(--pad);margin-bottom:14px}
+p{margin:0 0 18px;max-width:36em}
+a{color:var(--solder)}
+
+.figure{margin:28px 0}
+.figure img{max-width:100%;display:block;border:1px solid var(--rule);border-radius:6px}
+.figure figcaption{font-size:14px;color:var(--ink-soft);margin-top:10px}
+.placeholder{
+  border:1px dashed var(--rule);border-radius:6px;background:var(--panel);
+  padding:52px 24px;text-align:center;color:var(--ink-soft);font-size:15px;
+}
+
+.spec{
+  list-style:none;padding:0;margin:24px 0;
+  border-top:1px solid var(--rule);
+}
+.spec li{
+  display:flex;gap:20px;padding:13px 2px;border-bottom:1px solid var(--rule);
+}
+.spec dt,.spec .k{flex:0 0 116px;color:var(--ink-soft);font-size:15px}
+.spec .v{font-weight:600}
+
+.schematic{
+  background:var(--panel);border:1px solid var(--rule);border-radius:6px;
+  padding:20px 16px;margin:24px 0;
+}
+.schematic svg{width:100%;height:auto;display:block}
+
+table{width:100%;border-collapse:collapse;margin:24px 0;font-size:15.5px}
+caption{text-align:left;font-size:15px;color:var(--ink-soft);padding-bottom:10px}
+th,td{text-align:left;padding:11px 12px;border-bottom:1px solid var(--rule);vertical-align:top}
+thead th{border-bottom:2px solid var(--ink);font-weight:600;font-size:14.5px;color:var(--ink-soft)}
+td:first-child{white-space:nowrap;font-weight:600}
+tbody tr:nth-child(even){background:rgba(0,0,0,.016)}
+
+.callout{
+  background:var(--panel);border-left:4px solid var(--solder);border-radius:0;
+  padding:20px 22px;margin:28px 0;
+}
+.callout p:last-child{margin-bottom:0}
+.callout .title{font-weight:700;margin:0 0 8px}
+
+.pending{
+  margin-top:64px;padding-top:40px;border-top:1px solid var(--rule);
+}
+.pending .placeholder{padding:40px 24px}
+
+footer{margin-top:72px;padding-top:24px;border-top:1px solid var(--rule);font-size:14px;color:var(--ink-soft)}
+
+@media (max-width:600px){
+  body{font-size:16px}
+  header{padding:48px 0 32px}
+  h1{font-size:29px}
+  .lede{font-size:17px}
+  h2{font-size:21px;margin:44px 0 16px}
+  .wrap{padding:0 18px 72px}
+  .spec li{flex-direction:column;gap:2px}
+  .spec .k{flex:none}
+  table{font-size:14px}
+  th,td{padding:9px 8px}
+}
+
+.callout.guide{border-left-color:var(--pad);margin:36px 0 0}
+.btn{
+  display:inline-block;background:var(--solder);color:#fff;text-decoration:none;
+  font-weight:600;padding:11px 20px;border-radius:6px;
+}
+.btn:hover{background:var(--ink)}
+.table-note{font-size:14px;color:var(--ink-soft);margin:-12px 0 24px}
+
+h3{font-size:19px;font-weight:700;margin:40px 0 0;letter-spacing:-.01em}
+h3 .material{
+  display:inline-block;margin-left:8px;padding:1px 9px;vertical-align:2px;
+  font-size:13px;font-weight:600;color:var(--solder);
+  border:1px solid var(--rule);border-radius:4px;background:var(--panel);
+}
+h3 + p,h3 + ul,h3 + ol{margin-top:14px}
+
+.btn-row{display:flex;flex-wrap:wrap;gap:12px;margin:22px 0 24px}
+
+.schematic img{max-width:100%;height:auto;display:block;margin:0 auto}
+
+.poster a{display:block}
+.poster img{width:100%;height:auto}
+.pdf-pages{margin:24px 0}
+.pdf-pages canvas{
+  display:block;width:100%;height:auto;margin:0 0 16px;
+  background:var(--panel);border:1px solid var(--rule);border-radius:6px;
+}
+.pdf-status{color:var(--ink-soft);font-size:15px}
+
+section.guide{margin-top:64px;padding-top:40px;border-top:1px solid var(--rule)}
+section.guide h3{margin:44px 0 12px}
+section.guide h4{font-size:17px;font-weight:700;margin:28px 0 10px;letter-spacing:-.01em}
+section.guide ul,section.guide ol{max-width:36em;padding-left:22px}
+section.guide li{margin-bottom:8px}
+
+button.btn{border:0;font:inherit;cursor:pointer}
+.btn[hidden]{display:none}
+
+/* 완성 사진: 앞면과 뒷면을 위아래로 붙여서 */
+.pair img{margin-bottom:5px}
+.pair img:last-of-type{margin-bottom:0}
+
+/* 유튜브: 썸네일을 누르면 그 자리에서 재생 */
+.video-box{margin:24px 0}
+.video-box iframe,.video-facade{
+  display:block;width:100%;aspect-ratio:16/9;border:1px solid var(--rule);border-radius:6px;
+}
+.video-facade{position:relative;padding:0;overflow:hidden;cursor:pointer;background:var(--panel)}
+.video-facade img{width:100%;height:100%;object-fit:cover;display:block}
+.video-play{
+  position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
+  width:68px;height:48px;border-radius:10px;background:rgba(22,32,28,.78);
+}
+.video-play::after{
+  content:"";position:absolute;top:50%;left:54%;transform:translate(-50%,-50%);
+  border-style:solid;border-width:11px 0 11px 18px;border-color:transparent transparent transparent #fff;
+}
+.video-facade:hover .video-play{background:var(--solder)}
+.video-box .placeholder{aspect-ratio:16/9;display:flex;align-items:center;justify-content:center;padding:0}
+
+/* 목차 */
+.toc{
+  margin:36px 0 8px;padding:20px 22px;
+  background:var(--panel);border:1px solid var(--rule);border-radius:6px;
+}
+.toc h2{
+  font-size:13px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--ink-soft);margin:0 0 12px;
+}
+.toc h2::before{content:none}
+.toc ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:2px 28px}
+.toc li{margin:0}
+.toc a{display:block;padding:6px 0;text-decoration:none;color:var(--ink);font-size:15.5px}
+.toc a:hover{color:var(--solder)}
+@media (max-width:600px){
+  .toc ul{grid-template-columns:1fr}
+}
+
+/* 스크롤 시 섹션이 나타나는 효과 (reveal.js) */
+.reveal{opacity:0;transform:translateY(14px)}
+.reveal.in{opacity:1;transform:none;transition:opacity .55s ease,transform .55s ease}
+@media (prefers-reduced-motion:reduce){
+  .reveal{opacity:1;transform:none}
+}
+@media print{
+  .reveal{opacity:1;transform:none}
+}
+
+/* 섹션 번호 */
+h2 .sec-n{
+  display:inline-block;margin-right:11px;color:var(--pad);
+  font-weight:700;font-variant-numeric:tabular-nums;
+}
+.toc a{display:flex;align-items:baseline;gap:11px}
+.toc .n{color:var(--pad);font-weight:700;min-width:1em;font-variant-numeric:tabular-nums}
+.toc a:hover .n{color:var(--solder)}
+
+/* 주의 콜아웃 (index.html 톤) */
+.callout.warn{border-left-color:var(--warn)}
+.callout .c-label{
+  display:block;font-weight:700;font-size:13.5px;letter-spacing:.04em;
+  margin:0 0 6px;color:var(--solder);
+}
+.callout.warn .c-label{color:var(--warn)}
+
+/* 푸터 줄 간격 */
+footer{line-height:1.9}
+
+/* 첫 화면 링크 목록 */
+.hub{list-style:none;padding:0;margin:18px 0 0;border-top:1px solid var(--rule)}
+.hub li{margin:0;border-bottom:1px solid var(--rule)}
+.hub a{display:block;padding:16px 4px;text-decoration:none;color:var(--ink)}
+.hub a strong{display:block;font-size:17.5px}
+.hub a span{display:block;font-size:14.5px;color:var(--ink-soft);margin-top:2px}
+.hub a:hover strong{color:var(--solder)}
+
+/* 코드·요청 문장 블록 (workshops/fusion-ai) */
+pre{
+  background:var(--panel);border:1px solid var(--rule);border-radius:6px;
+  padding:16px 18px;margin:18px 0 24px;overflow-x:auto;
+  font-size:14.5px;line-height:1.7;white-space:pre-wrap;word-break:keep-all;overflow-wrap:anywhere;
+}
+pre code{font-family:Pretendard,-apple-system,BlinkMacSystemFont,system-ui,sans-serif;font-size:inherit;background:none;border:0;padding:0}
+code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:.88em;overflow-wrap:anywhere}
+p code,li code,td code{background:var(--panel);border:1px solid var(--rule);border-radius:4px;padding:1px 5px}
+kbd{
+  display:inline-block;min-width:1.6em;padding:0 6px;text-align:center;
+  font-family:inherit;font-size:.85em;font-weight:600;line-height:1.7;
+  background:var(--panel);border:1px solid var(--rule);border-bottom-width:2px;border-radius:4px;
+}
+.copy-box{position:relative}
+.copy-box .copy-btn{position:absolute;top:10px;right:10px;padding:5px 14px;font-size:14px}
+table.wrap-first td:first-child{white-space:normal}
+
+/* 사진 두 장씩 나란히 */
+.figure.duo{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.figure.duo img{width:100%;height:auto}
+table.keep-2 th,table.keep-2 td:nth-child(2){white-space:nowrap}
+td .sub{display:block;font-weight:400;font-size:13px;color:var(--ink-soft);margin-top:2px}
