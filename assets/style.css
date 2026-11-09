@@ -227,3 +227,5 @@ table.wrap-first td:first-child{white-space:normal}
 .figure.duo img{width:100%;height:auto}
 table.keep-2 th,table.keep-2 td:nth-child(2){white-space:nowrap}
 td .sub{display:block;font-weight:400;font-size:13px;color:var(--ink-soft);margin-top:2px}
+
+.top-note{font-size:13px;color:var(--ink-soft);margin:0 0 18px}
